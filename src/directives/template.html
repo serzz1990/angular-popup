@@ -1,0 +1,30 @@
+<div class="popup" ng-if=" data.popup.open ">
+	<div class="popup__wrapper">
+
+		<div ng-click=" cancel() " class="popup__overlay"></div>
+		<div class="popup__inner middle__item">
+
+			<div class="popup__panel panel">
+				<h2 class="panel__title" ng-bind=" data.popup.title "></h2>
+				<div class="panel__control">
+					<span class="control__item"><button ng-click=" cancel() " class="button"><span class="icon icon-close"></span></button></span>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+
+			<div class="popup__content content">
+				<div ng-if=" data.popup.template" ng-include=" data.popup.template "></div>
+				<div ng-if=" data.popup.content" class="content__block"  ng-bind=" data.popup.content "></div>
+			</div>
+
+			<div class="popup__footer footer">
+				<div class="footer__wrapper footer__wrapper_right">
+					<input ng-if=" data.popup.cancel " ng-click=" cancel() " value="{{data.popup.cancel.text}}" class="button button_gray" type="button">
+					<input ng-if=" data.popup.confirm " ng-click=" confirm() " value="{{data.popup.confirm.text}}" class="button button_blue" type="button">
+				</div>
+			</div>
+
+		</div>
+		<div class="middle"></div>
+	</div>
+</div>

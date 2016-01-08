@@ -1,0 +1,21 @@
+{
+    "name": "angular-popup",
+    "version": "1.0.0",
+    "homepage": "",
+    "description": "Angular popup",
+    "author": {
+        "name": "whooooop1"
+    },
+    "main": "dist/angular-popup.min.js",
+    "devDependencies": {
+        "babel": "^4.7.16",
+        "babel-loader": "^4.0.0",
+        "html-loader": "^0.2.3",
+        "gulp": "^3.9.0",
+        "webpack": "^1.10.1",
+        "webpack-stream": "^2.0.0",
+        "gulp-stylus": "^2.1.0",
+        "gulp-autoprefixer": "3.1.0",
+        "gulp-csso": "1.0.1"
+    }
+}

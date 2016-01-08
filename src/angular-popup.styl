@@ -1,0 +1,119 @@
+.popup {
+
+	position absolute
+	z-index 999
+	width 100%
+	height 100%
+	top 0
+	bottom 0
+	left 0
+	right 0
+	display block
+	transition 0.3s
+
+
+	&__wrapper {
+		width 100%
+		height 100%
+		position absolute
+		z-index 1
+		text-align center
+	}
+
+	&__overlay {
+		width 100%
+		height 100%
+		overflow auto
+		background-color rgba(0, 0, 0, 0.4)
+		position absolute
+		opacity 1
+		transition 0.3s
+		z-index 1
+	}
+
+	&__inner {
+		min-width 460px
+		margin 10px
+		background-color #fff
+		text-align left
+		box-shadow 0 0 0 4px rgba(0, 0, 0, 0.2)
+		overflow hidden
+		position relative
+		z-index 3
+		transition 0.3s
+	}
+
+	&__title {
+		margin 0 0 20px
+		height 30px
+		line-height 30px
+		font-size 30px
+		font-weight 500
+		color #4A4A4A
+		text-shadow 0 1px 0 #FFF
+	}
+
+	&__content {
+		max-height 400px
+		overflow-y auto
+
+		& .content__block {
+			
+			border-bottom 1px solid #f0f0f0
+			
+			&:last-child {
+				border-bottom none
+			}
+			
+		}
+
+		.button {
+			margin 0 0 0 10px
+		}
+	}
+
+	&__footer {
+
+		font-size 0
+
+		.button {
+			margin 0 0 0 10px
+		}
+
+	}
+
+
+
+	.ng-enter &__inner{
+		transform scale(0)
+	}
+	.ng-enter.ng-enter-active &__inner{
+		transform scale(1)
+	}
+
+	.ng-leave &__inner{
+		transform scale(1)
+	}
+	.ng-leave.ng-leave-active &__inner{
+		transform scale(0)
+	}
+
+
+
+
+	.ng-enter &__overlay{
+		opacity 0
+	}
+	.ng-enter.ng-enter-active &__overlay{
+		opacity 1
+	}
+
+	.ng-leave &__overlay{
+		opacity 1
+	}
+	.ng-leave.ng-leave-active &__overlay{
+		opacity 0
+	}
+
+
+}

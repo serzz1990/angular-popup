@@ -1,0 +1,10 @@
+{
+  "name": "angular-popup",
+  "ignore": [],
+  "devDependencies": {
+    "angular": "1.4.8",
+    "es5-shim": "~4.4.1"
+  },
+  "keywords": [],
+  "dependencies": {}
+}
